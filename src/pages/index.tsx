@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { VStack } from '@chakra-ui/react'
 import axios from 'axios'
 import Main from 'components/Layout'
@@ -6,7 +7,7 @@ import SideBar from 'components/SideBar'
 import { GetServerSideProps } from 'next/types'
 import { useEffect, useState } from 'react'
 
-export default function Home({ products }) {
+export default function Home({ products }: any) {
   const [productdata, setproductdat] = useState(products)
   const [selectOptions, setselectOptions] = useState<number>(1)
 
@@ -33,7 +34,7 @@ export default function Home({ products }) {
 
   return (
     <Main>
-      <SideBar SidebarButton={(e) => setselectOptions(e)}></SideBar>
+      <SideBar SidebarButton={(e: number) => setselectOptions(e)}></SideBar>
 
       <VStack alignItems="flex-start" w="full" p={6}>
         <LayoutCart data={productdata} />

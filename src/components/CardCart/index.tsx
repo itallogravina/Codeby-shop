@@ -13,10 +13,10 @@ type Products = {
 const CardCart = ({
   image,
   title,
-  price,
+  price = 0,
   category,
-  pricelistPrice,
-  disabledprice
+  pricelistPrice = 0,
+  disabledprice = false
 }: Products) => {
   return (
     <Flex

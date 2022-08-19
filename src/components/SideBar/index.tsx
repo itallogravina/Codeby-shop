@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { Flex, Text, Button, Grid } from '@chakra-ui/react'
 
-export default function SideBar({ SidebarButton }) {
+export default function SideBar({ SidebarButton }: any) {
   function ClickButton(params: number) {
     SidebarButton(params)
   }
