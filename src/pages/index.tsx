@@ -14,7 +14,7 @@ export default function Home({ products }: any) {
   async function ApiGetData() {
     const options = {
       method: 'POST',
-      url: 'https://codeby-test-itallo.herokuapp.com/api/date',
+      url: 'https://peaceful-dawn-79241.herokuapp.com/api/date',
       headers: { 'Content-Type': 'application/json' },
       data: { value: selectOptions }
     }
@@ -46,7 +46,7 @@ export default function Home({ products }: any) {
 export const getServerSideProps: GetServerSideProps = async () => {
   const options = {
     method: 'POST',
-    url: 'https://codeby-test-itallo.herokuapp.com/api/date',
+    url: 'https://peaceful-dawn-79241.herokuapp.com/api/date',
     headers: { 'Content-Type': 'application/json' },
     data: { value: 2 }
   }
