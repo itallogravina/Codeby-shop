@@ -2,6 +2,14 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { extendTheme } from '@chakra-ui/react'
+
+const theme = extendTheme({
+  fonts: {
+    heading: `'Poppins', sans-serif;`,
+    body: `'Poppins', sans-serif;`
+  }
+})
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -24,7 +32,7 @@ function App({ Component, pageProps }: AppProps) {
           content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
         />
       </Head>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
     </>
